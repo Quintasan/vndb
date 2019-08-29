@@ -1,6 +1,7 @@
 # Vndb
 
 [![Build Status](https://travis-ci.com/Quintasan/vndb.svg?branch=master)](https://travis-ci.com/Quintasan/vndb)
+[![Gem](https://img.shields.io/gem/v/vndb)](https://rubygems.org/gems/vndb)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/vndb`. To experiment with that code, run `bin/console` for an interactive prompt.
 
