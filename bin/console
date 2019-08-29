@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "vndb"
+require "pry"
+
+client = Vndb::Client.new
+
+Pry.start

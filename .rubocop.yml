@@ -1,0 +1,26 @@
+inherit_gem:
+  relaxed-rubocop: .rubocop.yml
+
+Gemspec/OrderedDependencies:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Exclude:
+    - bin/console
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/BlockDelimiters:
+  EnforcedStyle: line_count_based
+
+Layout/DotPosition:
+  EnforcedStyle: leading
+
+Metrics/BlockLength:
+  Exclude:
+    - vndb.gemspec
+    - spec/**/*_spec.rb
