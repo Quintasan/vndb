@@ -1,3 +1,4 @@
+# typed: true
 module Vndb
   module Constants
     VERSION = "0.1.0".freeze
