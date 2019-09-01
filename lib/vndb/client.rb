@@ -26,7 +26,7 @@ module Vndb
       payload = merge_credentials(payload, @username, @password) if @username && @password
       command = Vndb::Command.new(command: "login", payload: payload)
       @socket.puts(command.to_s)
-      data = T.must(@socket).read(1024)
+      data = T.must(@socket).recv(1024)
       response = Vndb::Response.new(raw_body: T.must(data))
       raise(Vndb::Error, T.must(response.body)) unless response.success?
     end
@@ -35,7 +35,7 @@ module Vndb
     def dbstats
       command = Vndb::Command.new(command: "dbstats")
       @socket.puts(command.to_s)
-      data = T.must(@socket).read(1024)
+      data = T.must(@socket).recv(1024)
       Vndb::Response.new(raw_body: T.must(data))
                     .then { |response| JSON.parse(response.body) }
     end

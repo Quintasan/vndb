@@ -22,7 +22,7 @@ module Vndb
           &.delete(Vndb::Constants::EOT)
           &.then { |raw_body_without_eot| RESPONSE_REGEXP.match(raw_body_without_eot) }
           &.then { |match_data| match_data.captures },
-        T::Array[String]
+        T::Array[T.nilable(String)]
       )
       @command = T.let(parsed_body.first, T.nilable(String))
       @body = T.let(parsed_body.last, T.nilable(String))
