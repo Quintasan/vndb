@@ -1,3 +1,4 @@
+# typed: true
 module Vndb
   module Spec
     module Support
