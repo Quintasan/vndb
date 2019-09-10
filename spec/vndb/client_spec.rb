@@ -12,7 +12,7 @@ describe Vndb::Client do
 
       socket_mock = Minitest::Mock.new
       socket_mock.expect(:puts, nil, [login_string])
-      socket_mock.expect(:recv, "ok\x04", [1024])
+      socket_mock.expect(:read, "ok\x04", [1024])
       socket_mock.expect(:is_a?, "ok\x04", [IO])
       socket_spy = Spy.on(TCPSocket, :open).and_return(socket_mock)
 
