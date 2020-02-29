@@ -23,7 +23,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.10)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     relaxed-rubocop (2.4)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
@@ -48,7 +48,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   pry
   pry-byebug
-  rake (~> 10.0)
+  rake (~> 13.0)
   relaxed-rubocop
   rubocop
   sorbet
